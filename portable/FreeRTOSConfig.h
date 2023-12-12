@@ -73,11 +73,11 @@
 #define configTICK_RATE_HZ						( ( TickType_t ) 1000 )
 #define configPERIPHERAL_CLOCK_HZ  				( 33333000UL )
 #define configUSE_PREEMPTION					1
-#define configUSE_IDLE_HOOK						1
-#define configUSE_TICK_HOOK						1
-#define configMAX_PRIORITIES					( 7 )
+#define configUSE_IDLE_HOOK						0
+#define configUSE_TICK_HOOK						0
+#define configMAX_PRIORITIES					( 70 )
 #define configMINIMAL_STACK_SIZE				( ( unsigned short ) 250 ) /* Large in case configUSE_TASK_FPU_SUPPORT is 2 in which case all tasks have an FPU context. */
-#define configTOTAL_HEAP_SIZE					( 125 * 1024 )
+#define configTOTAL_HEAP_SIZE					( 256 * 1024 * 512 )
 #define configMAX_TASK_NAME_LEN					( 10 )
 #define configUSE_TRACE_FACILITY				1
 #define configUSE_16_BIT_TICKS					0
@@ -97,7 +97,7 @@
 
 
 /* Software timer definitions. */
-#define configUSE_TIMERS						1
+#define configUSE_TIMERS						0 //caslan
 #define configTIMER_TASK_PRIORITY				( configMAX_PRIORITIES - 1 )
 #define configTIMER_QUEUE_LENGTH				5
 #define configTIMER_TASK_STACK_DEPTH			( configMINIMAL_STACK_SIZE * 2 )
@@ -118,7 +118,7 @@ to exclude the API function. */
 #define INCLUDE_vTaskSuspend					1
 #define INCLUDE_vTaskDelayUntil					1
 #define INCLUDE_vTaskDelay						1
-#define INCLUDE_xTimerPendFunctionCall			1
+#define INCLUDE_xTimerPendFunctionCall			0 //caslan
 #define INCLUDE_eTaskGetState					1
 #define INCLUDE_xTaskAbortDelay					1
 #define INCLUDE_xTaskGetTaskHandle				1
